@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button id="menu-toggle">☰</button>
+        <h1>MovieFlix</h1>
+    </header>
+
+    <nav id="side-menu">
+        <button id="close-menu">×</button>
+        <button id="recommend-movies-tab">Recommend Movies</button>
+        <button id="all-movies-tab">All Movies</button>
+        <button id="add-movie-btn">Add Movie</button>
+        <button id="delete-movie-btn">Delete Movie</button>
+    </nav>
+
+    <main>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search movies...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="sort-container" style="display: none;">
+            <button id="sort-toggle">Sort: Ascending</button>
+        </div>
+
+        <div id="content-wrapper">
+            <div id="movie-container" class="movie-container"></div>
+        </div>
+
+        <div id="movie-info" class="movie-info">
+            <button class="close-btn">×</button>
+            <div id="movie-info-content"></div>
+        </div>
+    </main>
+
+    <div id="add-movie-modal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Movie</h2>
+            <form id="add-movie-form">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="number" id="release-year" placeholder="Release Year" required>
+                <input type="text" id="genre" placeholder="Genre" required>
+                <input type="number" id="rating" placeholder="Rating" step="0.1" min="0" max="10" required>
+                <input type="text" id="thumbnail-url" placeholder="Thumbnail URL" required>
+                <button type="submit">Add Movie</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="delete-movie-modal" class="modal">
+        <div class="modal-content">
+            <h2>Delete Movie</h2>
+            <form id="delete-movie-form">
+                <input type="text" id="delete-title" placeholder="Movie Title" required>
+                <button type="submit">Delete Movie</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

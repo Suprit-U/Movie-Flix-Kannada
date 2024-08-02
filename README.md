@@ -43,12 +43,17 @@ MovieFlix Kannada Showcase is a web application that highlights and celebrates K
    mysql -u yourusername -p movie < movie.sql
    ```
 
-6. Start the server:
+6.Start Http server
+   ```
+      http-server
+   ```
+
+7. Start the server:
    ```
    node server.js
    ```
 
-7. Open `index.html` in your web browser to view the application.
+8. Open `index.html` in your web browser to view the application.
 
 ## Usage
 
